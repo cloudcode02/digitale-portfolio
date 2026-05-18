@@ -5,6 +5,8 @@ html{
 
 body{
     height: 100%;
+    margin: 0;
+    overflow-x: hidden;
     background-image: linear-gradient(to right, #D12828, #181A19, #1D1F1F);
 background-repeat: no-repeat;
 background-attachment: fixed;
@@ -13,481 +15,613 @@ color: #c4b7af;
 
 }
 li{
+
     list-style-type: none;
+
     display: inline;
+
     justify-content: space-around;
 
-    
+
+
+   
+
+
 
 }
-    
+
 .logo1{
+
     float: right;
-    position: fixed;
-    right: 0%;
+
+    position: sticky;
+
     top: 10px;
+
     height: 50px;
+
     width: 50px;
+
+    right: 0%;
+
     border-radius: 50px;
 
+
+
 }
-.logo{
-    float: right;
-    position: fixed;
-    right: 4%;
-    top: 10px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
+
+.logo {
+
+  position: absolute; /* Changed from relative to absolute */
+
+  right: 20px;        /* Spacing from the right edge of the screen */
+
+  top: 150px;         /* Keeps your vertical alignment */
+
+  height: 450px;
+
+  width: 560px;
+
+  border-radius: 50px;
+
+  z-index: 1;        
+
+ 
+
+
 
 }
 
 .gear-container{
+
     position: fixed;
+
    
+
     width: 100%;
+
     height: 100%;
-    z-index: -1;
+
+    z-index: -99;
+
     pointer-events: none;
 
+
+
 }
+
 .gear{
+
     width: 100px;
+
     height: 100px;
+
     position: fixed;
+
     animation: rotate 5s linear infinite; /*makes it spin infinity*/
+
     opacity: 0.2; /*makes it look like a background*/
+
     animation: rotate 5s linear infinite;
+
 }
+
 @keyframes rotate {
+
     from {
+
         transform: rotate(0deg);
 
+
+
     }
+
     to {
+
         transform: rotate(360deg);
+
     }
+
 }
+
 /*ive rotated all my gears at once incide the gear so i dont have to write it seperately */
 
 
+
+
+
 .gear2{
+
     top: 45%;
+
     left: 78%;
 
+
+
 }
+
+
 
 .gear3{
+
     top: 40%;
+
     left: 83%;
+
     animation: rotate 5s linear infinite;
+
 }
+
+
 
 .gear6{
+
     width: 250px;
+
     height: 250px;
+
     position: fixed; /*ive fixed the position so it doesnt move when i make changes*/
+
     animation: rotate 5s linear infinite; /*makes it spin infinity*/
+
     opacity: 0.2; /*makes it look like a background*/
+
     animation: rotate 5s linear infinite;
+
 }
+
 @keyframes rotate {
+
     from {
+
         transform: rotate(0deg);
 
+
+
     }
+
     to {
+
         transform: rotate(360deg);
+
     }
+
 }
+
 /*ive rotated all my gears at once incide the gear2 so i dont have to write it seperately */
+
 /*ive wanted to change the size of these so i wrote them seperately */
 
+
+
 .gear4{
+
     top: 5%;
+
     left: 10%;
 
+
+
 }
+
+
 
 .gear5{
+
     top: 20%;
+
     left: 20%;
-    
+
+   
+
 }
+
 .container{
+
     width: 100%;
+
     display: block;
+
 }
+
 #info-toggle{
+
     position: fixed;
+
     top: 30px;
+
     left: 20px;
+
     height: 40px;
+
     width: 50px;
+
     background-color: #1D1F1F;
+
     color: aliceblue;
+
     border: none;
+
     border-radius: 5px;
+
     cursor: pointer;
+
     z-index: 1000;
+
 }
+
+
 
 .navbar{
+
     position: fixed;/*is fixed so it prevents your home section to be pushed down */
+
     top: 30px;
+
     left: 80px;
+
     display: flex;
-    width: auto; /*if you dont want it to be side by side you remove this one */
-    height: 5em;
+
+    width: 46rem; /*if you dont want it to be side by side you remove this one */
+
+    height: 2em;
+
+    margin: 20px auto;
+
     border-radius: 20px;
+
     background-color: rgb(38, 40, 42, 0.5);
+
     backdrop-filter: blur(10px);
+
     justify-content: space-between;
-    padding: 15px 30px;
+
+    padding: 10px 30px;
+
 box-shadow: 0 10px 20px rgba(49, 45, 45, 0.5);
+
 z-index: 999;
- animation: anime 1s ease forwards; 
+
+ animation: anime 1s ease forwards;
+
 }
+
 @keyframes anime {
+
     0% {
+
         opacity: 0;
+
         transform: translateY(-20px);
+
     }
+
     100%{
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
+
 }
+
 .navlinks{
-    
+
+   
+
     position: relative; /*  REQUIRED */
+
     display: inline-block; /*  ensures proper sizing */
 
-    font-size: 50px;
+margin-top: -15px;
+
+    font-size: 35px;
+
     border-radius: 5px;
+
     text-decoration: none;
-    padding:10px 40px; 
+
+    padding: 0px 25px;
+
      background: linear-gradient(90deg, #563d2d, #c2afa5, #836753);
-     -webkit-background-clip: text;/*Only show the background inside the text shape, normally background covers the whole element so this tells the background to only cut to the 
+
+     -webkit-background-clip: text;/*Only show the background inside the text shape, normally background covers the whole element so this tells the background to only cut to the
+
      letters */ /*this also covers the colors so it wont work anymore even in hover */
+
     background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
     /*It makes the actual text invisible, so the background shows through.*/
 
+
+
 }
-.navlinks::before { /*added this because i want to put a hover but because the webkit was blocking the colors i had to make it like this to still make a hover 
+
+.navlinks::before { /*added this because i want to put a hover but because the webkit was blocking the colors i had to make it like this to still make a hover
+
     without having the front letters blocked */
+
     content: "";
+
     position: absolute;
+
     inset: 0;
+
     background: #1D1F1F;
+
     border-radius: 20px;
+
     opacity: 0; /*this makes it fully transparant*//*The hover background starts hidden*/
+
     z-index: -1; /*makes it react like a background, so lower index means goes behind and a higher index number means its going closer to the user */
+
     transition: opacity 0.3s ease;
+
     /*This creates a hidden background layer behind the text*/
+
 }
+
+
 
 .navlinks:hover::before {
+
     opacity: 1; /*fully visible*/
+
 }
+
+.links{
+
+    color: #836753;
+
+}
+
+
 
 section{
-    height: 100vh;
+
+    width: auto;
+
+    min-height: 100vh;
+
     position: relative;
+
     display: flex;
-    max-width: 900px;
+
+    flex-wrap: wrap;
+
     justify-content: center;
-    font-weight: 600;
+
     align-items: center;
+
+    gap: 40px;
+
     text-align: center;
+
+    padding: 20px 20px 50px;
+
+    box-sizing: border-box;
+
+    overflow-x: hidden;
+
 }
 
+
+
 h1{
+
     color: #c4b7af;
+
     font-size: 50px;
-    
+
+    display: inline-block;
+
+    margin-left: 40px;
+
+}
+
+
+
+.intro{
+
+    height: 650px;
+
+    width: 550px;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: top 50px;
+
+    margin-right: 30%;
+
+    font-size: 25px;
+
+
+
+padding-left: 15px;
+
+    overflow: auto;
+
+    display: flex;
+
+    word-wrap:normal;
+
+    box-sizing: border-box;
+
+    box-shadow: inset 0 15px 20px rgba( 0, 0, 0, 15)
+
+}
+
+ .skills{
+
+    height: 450px;
+
+    width: 450px;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: top 50px;
+
+    margin-right: 30%;
+
+    font-size: 25px;
+
+padding-left: 20px;
+
+    overflow: auto;
+
+    display: flex;
+
+    word-wrap:normal;
+
+    box-sizing: border-box;
+
+    box-shadow: inset 0 15px 20px rgba( 0, 0, 0, 15)
+
 }
 
 p{
-    margin-left: 30%;
+
+    width: 300px;
+
+    max-width: 400px;
+
     padding-top:50px;
+
     font-size: clamp( 2rem, 1.5em, 3em);
-    justify-content: center;
-}
-.contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    row-gap: 30px; /*puts a gap between the rows */
+
+
+
+
+
+    box-shadow: inset 0 15px 20px rgba( 0, 0, 0, 15)
+
 }
 
-.fadeIn{ 
+footer{
+
+    text-align: center;
+
+    padding: 10px;
+
+}
+
+
+
+.end{
+
+    font-size: 14px;
+
+    width: auto;
+
+    height: auto;
+
+    padding: 0;
+
+    margin: 0;
+
+    box-shadow: none;
+
+}
+
+.contact{
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+   
+
+    row-gap: 30px; /*puts a gap between the rows */
+
+}
+
+
+
+.fadeIn{
+
  background-color: #c4b7af;
 
+
+
 }
-.img-container{ 
-    display: flex;
-    margin-right: 50px;
-    justify-content: center;
-    column-gap: 20px; /*puts a gap between the columns */
-}
+
 .img1{
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 99px 2px;
-    z-index: 1;
-    margin: 10px;
-    
-}
 
-.img2{
-    display: inline-block;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 99px;
-}
+    display: flex;
 
-@media screen and (min-width:360px) and (max-width:500px ) {
    
-.logo1{
-    
-    position: fixed;
-    right: 8%;
-    top: 10px;
-    height: 50px;
-    width: 50px;
-    
+
+    justify-content: center;
+
+    max-width: 350px;
+
+    max-height: 550px;
+
+    border-radius: 20px 20px 20px 20px;
+
+    z-index: 1;
+
+    margin-top: -585px;
+
+    padding-left: 570px;
+
+   
 
 }
-.logo{
-    
-    position: fixed;
-    right: 20%;
-    top: 10px;
-    height: 50px;
-    width: 50px;
+
+
+
+video{
+
+    height: 350px;
+
+    width: 430px;
+
     border-radius: 50px;
 
-}
+   padding:15px;
 
-.gear-container{
-    position: fixed;
-   
-    width: 100px;
-    height: 100px;
-    z-index: -1;
-    pointer-events: none;
+margin-right: 250px;
 
-}
-.gear{
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    animation: rotate 5s linear infinite; /*makes it spin infinity*/
-    opacity: 0.2; /*makes it look like a background*/
-    animation: rotate 5s linear infinite;
-}
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+text-align: center;
 
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-/*ive rotated all my gears at once incide the gear so i dont have to write it seperately */
-
-
-.gear2{
-    top: 40%;
-    left: 60%;
+align-items: center;
 
 }
 
-.gear3{
-    top: 50%;
-    left: 70%;
-    animation: rotate 5s linear infinite;
-}
+table{
 
-.gear6{
-    width: 150px;
-    height: 150px;
-    position: fixed; /*ive fixed the position so it doesnt move when i make changes*/
-    animation: rotate 5s linear infinite; /*makes it spin infinity*/
-    opacity: 0.2; /*makes it look like a background*/
-    animation: rotate 5s linear infinite;
-}
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
+    width: 80%;
 
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-/*ive rotated all my gears at once incide the gear2 so i dont have to write it seperately */
-/*ive wanted to change the size of these so i wrote them seperately */
+    border-collapse: collapse;
 
-.gear4{
-    top: 10%;
-    left: 5%;
+    margin: auto;
 
 }
 
-.gear5{
-    top: 25%;
-    left: 20%;
-    
-}
-.container{
-    width: 100%;
-    display: block;
-}
-#info-toggle{
-    position: fixed;
-    top: 30px;
-    left: 20px;
-    height: 40px;
-    width: 50px;
-    background-color: #1D1F1F;
-    color: aliceblue;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.navbar{
-    position: fixed;/*is fixed so it prevents your home section to be pushed down */
-    top: 90px;
-    left: 25px;
-    display: flex;
-    width: 200px; /*if you dont want it to be side by side you remove this one */
-    height: 20em;
-    border-radius: 20px;
-    background-color: rgb(38, 40, 42, 0.5);
-    backdrop-filter: blur(10px);
-    justify-content: space-around;
-    padding: 15px 30px;
-box-shadow: 0 10px 20px rgba(208, 196, 196, 0.5);
-z-index: 999;
- animation: anime 1s ease forwards; 
-}
-@keyframes anime {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.navlinks{
-    
-    position: relative; /*  REQUIRED */
-    display: inline-block; /*  ensures proper sizing */
-
-    font-size: 50px;
-    border-radius: 5px;
-    text-decoration: none;
-    padding:10px 10px; 
-     background: linear-gradient(90deg, #563d2d, #c2afa5, #836753);
-     -webkit-background-clip: text;/*Only show the background inside the text shape, normally background covers the whole element so this tells the background to only cut to the 
-     letters */ /*this also covers the colors so it wont work anymore even in hover */
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /*It makes the actual text invisible, so the background shows through.*/
-
-}
-.navlinks::before { /*added this because i want to put a hover but because the webkit was blocking the colors i had to make it like this to still make a hover 
-    without having the front letters blocked */
-    content: "";
-    position: absolute;
-    inset: 0;
-    font-size: 25px;
-    background: #1D1F1F;
-    border-radius: 20px;
-    opacity: 0; /*this makes it fully transparant*//*The hover background starts hidden*/
-    z-index: -1; /*makes it react like a background, so lower index means goes behind and a higher index number means its going closer to the user */
-    transition: opacity 0.3s ease;
-    /*This creates a hidden background layer behind the text*/
-}
-
-.navlinks:hover::before {
-    opacity: 1; /*fully visible*/
-    background-color: #836753;
-}
-section{
-    height: 100vh;
-    overflow: scroll;
-    position: relative;
-    display: block; /*if i put flex it will come in a line, so i decide to block it */
-    max-width: 900px;
-    justify-content: center;
-    font-weight: 600;
-    align-items: center;
-    text-align: center;
-}
-li{
-    list-style-type: none;
-}
-h1{
-    color: #c4b7af;
-    font-size: 50px;
-    padding-top: 100px;
-    justify-content: space-around;
-    
-    
-}
-
-p{
-    width: 90%;
-    height: 400px;
-    padding-left: 10px;
-       font-size: 15px;
-       margin-left: 15px;
 
 
-}
-.contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    row-gap: 30px; /*puts a gap between the rows */
-}
+th, td{
 
-.fadeIn{ 
- background-color: #c4b7af;
+    border: 2px solid gray;
 
-}
-.img-container{ 
-    display: flex;
-    margin-right: 50px;
-    justify-content: center;
-    column-gap: 20px; /*puts a gap between the columns */
-}
-.img1{
-    max-width: 250px;
-    max-height: 250px;
-    border-radius: 99px 2px;
-    z-index: 1;
-    margin-top: -17em;
-    
+    padding: 15px;
+
 }
 
 
-.img2{
-    display: inline-block;
-    max-width: 300px;
-    max-height: 300px;
-    border-radius: 99px;
+
+thead tr{
+
+    background-color: #563d2d;
+
 }
-};
-    

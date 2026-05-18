@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(to right, #D12828, #181A19, #1D1F1F);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    /* --- Layout & Typography --- */
+    h1 {
+        font-size: 42px;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    p {
+        width: 85%;
+        max-width: 500px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+
+    /* --- Navigation Bar --- */
+    /* Shrinks the 46rem desktop width down so it safely fits tablet screens */
+    .navbar {
+        width: 85%; 
+        left: 5%;
+        right: 5%;
+        top: 20px;
+        padding: 10px 20px;
+    }
+
+    .navlinks {
+        font-size: 26px; /* Slightly smaller than desktop's 35px */
+        padding: 0 15px;
+    }
+
+    /* --- Logos & Images --- */
+    /* Scales down the large absolute elements so they don't overlap your text */
+    .logo {
+        position: absolute;
+        right: 20px;
+        top: 120px;
+        height: 300px; /* Scaled down from 450px */
+        width: 380px;  /* Scaled down from 560px */
+    }
+
+    .img1 {
+        display: block;
+        max-width: 300px;
+        height: auto;
+        margin: 40px auto 0; /* Removes the chaotic desktop -585px margin */
+        padding-left: 0;     /* Removes the desktop 570px push */
+    }
+
+    /* --- Content Sections --- */
+    .intro, .skills {
+        width: 45%; /* Allows content to sit nicely if using a split-screen feel */
+        min-width: 340px;
+        height: 500px;
+        margin-right: 0; /* Removes the 30% desktop margin that breaks tablet layouts */
+        font-size: 22px;
+    }
+
+    video {
+        height: 280px;
+        width: 350px;
+        margin-right: 0; /* Centers the video instead of throwing it to the left */
+        display: block;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 90%;
+    }
+}

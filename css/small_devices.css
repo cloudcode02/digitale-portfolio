@@ -1,0 +1,132 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, #D12828, #181A19, #1D1F1F);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+
+}
+@media screen and (max-width: 768px) {
+    
+    /* --- Layout & Typography --- */
+    body {
+        overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.2rem; /* Adjusted because clamp() can scale aggressively on small screens */
+        padding-top: 20px;
+    }
+
+    /* --- Navigation Bar --- */
+    /* Shrinks the bar and changes positioning to fit a narrow screen */
+    .navbar {
+        width: calc(100% - 40px); /* Stretches across the screen with padding */
+        height: auto;
+        left: 10px;
+        right: 10px;
+        top: 70px; /* Pushed down so it doesn't overlap the info-toggle button */
+        flex-direction: row; 
+        flex-wrap: wrap; /* Allows links to wrap if they run out of space */
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    #info-toggle {
+        top: 15px;
+        left: 15px;
+    }
+
+    .navlinks {
+        font-size: 20px; /* Shrunk down from 35px so they fit on one line */
+        padding: 5px 10px;
+        margin-top: 0;
+    }
+
+    /* --- Logos & Images --- */
+    /* Large desktop absolute/sticky elements forced back into the normal document flow */
+    .logo1 {
+        position: relative;
+        float: none;
+        margin: 10px auto;
+        display: block;
+        top: 0;
+        right: 0;
+    }
+
+    .logo {
+        position: relative; /* Un-sticking from absolute so it doesn't overlap text */
+        top: 0;
+        right: 0;
+        width: 90%; /* Scale smoothly to the phone width */
+        height: auto; /* Keeps aspect ratio intact */
+        margin: 20px auto;
+        display: block;
+    }
+
+    .img1 {
+        position: relative;
+        margin-top: 20px; /* Removed massive -585px desktop shift */
+        padding-left: 0; /* Removed 570px desktop push */
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Content Sections --- */
+    /* Containers set to auto/percentage widths so they don't overflow the screen */
+    .intro, .skills {
+        width: 100%;
+        height: auto; /* Let the content dictate the height instead of hardcoding 650px */
+        max-height: 400px; /* Keeps your scrollable feature working safely */
+        margin-right: 0; /* Removes the 30% desktop margin pushing it off-screen */
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        margin-right: 0; /* Removes desktop alignment shift */
+        padding: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px; /* Smaller padding for tighter screens */
+        font-size: 14px;
+    }
+
+    /* --- Background Gears --- */
+    /* Repositioned gears slightly closer so they stay visible on narrow screens */
+    .gear2 {
+        top: 50%;
+        left: 65%;
+    }
+
+    .gear3 {
+        top: 45%;
+        left: 70%;
+    }
+}
