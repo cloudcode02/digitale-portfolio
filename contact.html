@@ -1,0 +1,103 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Background layout images & decorative elements -->
+    <img src="img/gear.png" alt="gear" class="logo1" />
+    <img src="img/pic.png" alt="profile picture" class="logo" />
+
+    <div class="gear-container">
+        <img src="img/gear.png" alt="gear" class="gear gear2" />
+        <img src="img/gear.png" alt="gear" class="gear gear3" />
+        <img src="img/gear.png" alt="gear" class="gear6 gear4" />
+        <img src="img/gear.png" alt="gear" class="gear6 gear5" />
+    </div>
+
+    <div class="glow-sphere"></div>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container">
+            <!-- Menu Toggle SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="lucide-menu-icon" id="info-toggle">
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
+            </svg>
+
+            <div id="info" hidden>
+                <nav class="navbar">
+                    <ul class="info-link">
+                        <li><a href="index.html" class="navlinks">about me</a></li>
+                        <li><a href="skills" class="navlinks">skills</a></li>
+                        <li><a href="work.html" class="navlinks">projects</a></li>
+                        <li><a href="contact.html" class="navlinks">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Contact Form Card -->
+    <main class="contact-container">
+        <div class="contact-header">
+            <h2>Get In Touch</h2>
+            <p>Drop a line. Let's build something epic.</p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="name@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="form-footer">
+            Or email directly at <a href="mailto:alexnox1546@gmail.com">email</a>
+        </div>
+    </main>
+
+    <!-- Social Links Section -->
+    <section id="contact" class="hidden">
+        <div class="contact">
+            <h1>Social Profiles</h1>
+            <div class="social-icons-container">
+                <a href="mailto:alexnox1546@gmail.com">
+                    <img src="img/email.png" alt="Email" />
+                </a>
+                <a href="https://www.linkedin.com/in/dayen-adney-012057404/" target="_blank" rel="noopener">
+                    <img src="img/linkedin.png" alt="LinkedIn" />
+                </a>
+                <a href="https://github.com/cloudcode02" target="_blank" rel="noopener">
+                    <img src="img/github.png" alt="GitHub" />
+                </a>
+                <a href="https://www.instagram.com/mycloud196?igsh=cTN3bGR5aG90bHNh" target="_blank" rel="noopener">
+                    <img src="img/insta.png" alt="Instagram" />
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript Scripts -->
+    <script src="js/button.js"></script>
+</body>
+</html>

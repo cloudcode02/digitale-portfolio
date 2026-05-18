@@ -29,6 +29,41 @@ li{
 
 
 }
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto !important;
+    overflow: visible !important;
+    list-style: none;
+}
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Box Dimensions & Sizing */
+    width: 100%;
+    max-width: 600px;
+    height: auto; /* Changed from 650px to auto so text never clips or runs out of room */
+    box-sizing: border-box;
+    
+    /* Spacing */
+    padding-top: 50px;
+    padding-left: 15px;
+    margin-right: 30%;
+    
+    /* Typography */
+    font-size: 25px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    
+    /* Layout & Behavior */
+    overflow: visible !important; /* Forces the box to grow with your content */
+    
+    /* Aesthetics */
+    box-shadow: inset 0 15px 20px rgba(0, 0, 0, 0.8);
+}
 
 .logo1{
 
@@ -424,37 +459,7 @@ h1{
 
 
 
-.intro{
 
-    height: 650px;
-
-    width: 550px;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: top 50px;
-
-    margin-right: 30%;
-
-    font-size: 25px;
-
-
-
-padding-left: 15px;
-
-    overflow: auto;
-
-    display: flex;
-
-    word-wrap:normal;
-
-    box-sizing: border-box;
-
-    box-shadow: inset 0 15px 20px rgba( 0, 0, 0, 15)
-
-}
 
  .skills{
 
@@ -624,4 +629,232 @@ thead tr{
 
     background-color: #563d2d;
 
+}
+.contact-container{
+    width: 20px;
+     height: 20px;
+}
+.lucide-menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor; /* Inherits the text color of its parent element */
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+@media screen and (max-width: 768px) {
+    
+    /* --- Layout & Typography --- */
+    body {
+        overflow-x: hidden; /* Prevents accidental horizontal scrolling */
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1.2rem; /* Adjusted because clamp() can scale aggressively on small screens */
+        padding-top: 20px;
+    }
+
+    /* --- Navigation Bar --- */
+    /* Shrinks the bar and changes positioning to fit a narrow screen */
+    .navbar {
+        width: calc(100% - 40px); /* Stretches across the screen with padding */
+        height: auto;
+        left: 10px;
+        right: 10px;
+        top: 70px; /* Pushed down so it doesn't overlap the info-toggle button */
+        flex-direction: row; 
+        flex-wrap: wrap; /* Allows links to wrap if they run out of space */
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    #info-toggle {
+        top: 15px;
+        left: 15px;
+    }
+
+    .navlinks {
+        font-size: 20px; /* Shrunk down from 35px so they fit on one line */
+        padding: 5px 10px;
+        margin-top: 0;
+    }
+
+    /* --- Logos & Images --- */
+    /* Large desktop absolute/sticky elements forced back into the normal document flow */
+    .logo1 {
+        position: relative;
+        float: none;
+        margin: 10px auto;
+        display: block;
+        top: 0;
+        right: 0;
+    }
+
+    .logo {
+        position: relative; /* Un-sticking from absolute so it doesn't overlap text */
+        top: 0;
+        right: 0;
+        width: 90%; /* Scale smoothly to the phone width */
+        height: auto; /* Keeps aspect ratio intact */
+        margin: 20px auto;
+        display: block;
+    }
+
+    .img1 {
+        position: relative;
+        margin-top: 20px; /* Removed massive -585px desktop shift */
+        padding-left: 0; /* Removed 570px desktop push */
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* --- Content Sections --- */
+    /* Containers set to auto/percentage widths so they don't overflow the screen */
+    .intro, .skills {
+        width: 100%;
+        height: auto; /* Let the content dictate the height instead of hardcoding 650px */
+        max-height: 400px; /* Keeps your scrollable feature working safely */
+        margin-right: 0; /* Removes the 30% desktop margin pushing it off-screen */
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+        margin-right: 0; /* Removes desktop alignment shift */
+        padding: 0;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px; /* Smaller padding for tighter screens */
+        font-size: 14px;
+    }
+
+    /* --- Background Gears --- */
+    /* Repositioned gears slightly closer so they stay visible on narrow screens */
+    .gear2 {
+        top: 50%;
+        left: 65%;
+    }
+
+    .gear3 {
+        top: 45%;
+        left: 70%;
+    }
+}
+.contact-container{
+    width: 20px;
+     height: 20px;
+}
+.lucide-menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor; /* Inherits the text color of its parent element */
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    /* --- Layout & Typography --- */
+    h1 {
+        font-size: 42px;
+        margin-left: 20px;
+        text-align: center;
+    }
+
+    p {
+        width: 85%;
+        max-width: 500px;
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+
+    /* --- Navigation Bar --- */
+    /* Shrinks the 46rem desktop width down so it safely fits tablet screens */
+    .navbar {
+        width: 85%; 
+        left: 5%;
+        right: 5%;
+        top: 20px;
+        padding: 10px 20px;
+    }
+
+    .navlinks {
+        font-size: 26px; /* Slightly smaller than desktop's 35px */
+        padding: 0 15px;
+    }
+
+    /* --- Logos & Images --- */
+    /* Scales down the large absolute elements so they don't overlap your text */
+    .logo {
+        position: absolute;
+        right: 20px;
+        top: 120px;
+        height: 300px; /* Scaled down from 450px */
+        width: 380px;  /* Scaled down from 560px */
+    }
+
+    .img1 {
+        display: block;
+        max-width: 300px;
+        height: auto;
+        margin: 40px auto 0; /* Removes the chaotic desktop -585px margin */
+        padding-left: 0;     /* Removes the desktop 570px push */
+    }
+
+    /* --- Content Sections --- */
+    .intro, .skills {
+        width: 45%; /* Allows content to sit nicely if using a split-screen feel */
+        min-width: 340px;
+        height: 500px;
+        margin-right: 0; /* Removes the 30% desktop margin that breaks tablet layouts */
+        font-size: 22px;
+    }
+
+    video {
+        height: 280px;
+        width: 350px;
+        margin-right: 0; /* Centers the video instead of throwing it to the left */
+        display: block;
+        margin: 0 auto;
+    }
+
+    table {
+        width: 90%;
+    }
+}
+.contact-container{
+    width: 20px;
+     height: 20px;
+}
+.lucide-menu-icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentColor; /* Inherits the text color of its parent element */
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
