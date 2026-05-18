@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Work / Projects Page Stylesheet
+   ========================================================================== */
+
+/* Page layout structure */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#project h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #ffffff, #ff3333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   Modern Showcase Table Layout
+   ========================================================================== */
+
+.projects-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px 0; /* Creates clean spacing between the columns */
+    margin-top: 20px;
+}
+
+/* Table Header Styles */
+.projects-table th {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding-bottom: 15px;
+    text-align: left;
+    border-bottom: 2px solid rgba(255, 0, 0, 0.3);
+}
+
+/* Table Body Column Cards */
+.projects-table td {
+    width: 50%;
+    vertical-align: top;
+    padding: 30px 0;
+}
+
+/* Internal card wrapper inside cells (gives it that glassmorphism depth) */
+.projects-table td:has(video),
+.projects-table td:has(.links) {
+    background: rgba(20, 20, 20, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 0, 0, 0.15);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Hover effects for project slots */
+.projects-table td:has(video):hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.1);
+}
+
+/* Empty Project Slots ("Still in progress") */
+.projects-table td:empty,
+.projects-table td:not(:has(*)) {
+    background: rgba(10, 10, 10, 0.3);
+    border: 2px dashed rgba(255, 255, 255, 0.07);
+    border-radius: 16px;
+    min-height: 300px;
+    display: table-cell; /* Keeps layout symmetry intact */
+    position: relative;
+}
+
+/* Placeholder watermark for upcoming items */
+.projects-table td:empty::before {
+    content: "Coming Soon...";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Video Player Component */
+.projects-table video {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000000;
+    outline: none;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Repository Link Buttons */
+.projects-table .links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #990000 0%, #ff0000 100%);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: auto; /* Pushes button to bottom of container if description length changes */
+}
+
+.projects-table .links:hover {
+    background: linear-gradient(90deg, #ff0000 0%, #990000 100%);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+    transform:

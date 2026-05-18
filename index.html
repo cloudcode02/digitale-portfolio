@@ -3,128 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <link rel="icon" title="image" href="img/WhatsApp Image 2026-04-15 at 8.04.25 PM.jpeg">
-    <!--ive use whatsapp image cus idk why my other png didnt wanna work -->
+    <title>Portfolio</title>
+    <link rel="icon" type="image/jpeg" href="img/icon.jpeg">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/small_devices.css">
-    <link rel="stylesheet" href="css/medium_devices.css">
-
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-    
-    <img src="img/gear.png" alt="gear" class="logo1"/>
- <img src="img/pic.png" class="logo"/>
 
-
-
-    
-
-    <div class="gear-container">
-        <img src="img/gear.png" alt="gear" class="gear gear2"/>
-          <img src="img/gear.png" alt="gear" class="gear gear3"/>
-            <img src="img/gear.png" alt="gear" class="gear6 gear4"/>
-              <img src="img/gear.png" alt="gear" class="gear6 gear5"/>
-<!--i put my imaage first so i can make the background layout of the webpage before ill start on what i want to put as text -->
-    </div>
     <header> 
+        <div class="container">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="lucide-menu-icon" id="info-toggle">
+                <path d="M4 5h16" />
+                <path d="M4 12h16" />
+                <path d="M4 19h16" />
+            </svg>
 
-        <button id="info-toggle" onclick="info.hidden ^= 1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg> </button>
-<!--ive hidden the navbar cus i want it to be clean and different from the usual portfolio -->
-       
-<div class="container">
             <div id="info" hidden>
                 <nav class="navbar">
                     <ul class="info-link">
-                        <li><a href="#aboutme" class="navlinks"> about me</a></li>
-                        <li><a href="#skills" class="navlinks"> skills</a></li>
-                        <li><a href="#project" class="navlinks"> project</a></li>
-                        <li><a href="#contact" class="navlinks"> contact</a></li>
-                        </ul>
-                </nav><!--never use a nav inside a another nav or else it will break the layout and will be weird-->
+                        <li><a href="#aboutme" class="navlinks">about me</a></li>
+                        <li><a href="#skills" class="navlinks">skills</a></li>
+                        <li><a href="work.html" class="navlinks">projects</a></li>
+                        <li><a href="contact.html" class="navlinks">contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-       
-    </header><br/>
+    </header>
     
-    <section id="aboutme" class="hidden">
-<div class="circle">
-    <h1> about me</h1>
-    </div><br/>
+    <img src="img/gear.png" alt="gear decorative" class="logo1" />
+    <img src="img/pic.png" alt="profile picture" class="logo" />
 
-     <p class="intro">Hello <br/>
-I am a first-year Software Engineering student at UNASAT with nearly two years of coding experience.<br/>
- I strive to constantly improve my skills to become a full-stack software developer.<br/>
-  By being open to feedback and proactive in learning, I have managed to efficiently solve the challenges I encounter as a developer.<br/>
-I dont limit myself to software alone; I build the bridge between hardware and software, <br/>
-this focus allows me to lead and collaborate on developing creative, functional prototypes that solve real-world problems. <br/>
-
-</p>
-
-
-
-    </section><br/>
-    <hr>
-     <section id="skills" class="hidden">
-        <h1> skills</h1>
-        <p class="skills">
-            <!--the programming skills i have so far are: --> 
-- HTML : 90% <br>
-- CSS: 80% <br>
-- JavaScript: 40% <br>
-- react: 10% <br>
-- mySQL: 20% <br>
-- php: 20% <br/>
-- c++: 50% <br/>
-        </p><br/>
-        
-        <img class="img1" src="img/coding screen.jpeg"/>
-         
-    </section>
-    <br/>
-    <hr>
-     <section id="project" class="hidden">
-        <h1>projects</h1>
-        <table style="border: 4px;">
-            <thead>
-                <tr>
-            <th>finished</th>
-            <th>still in progress</th>
-            
-                </tr>
-            </thead>
-        <tbody>
-            <tr>
-            <td>
-            
-        <video src="video/Schermopname 2026-05-18 030659.mp4" controls></video>
-       <a href="https://github.com/cloudcode02/calculator" class="links"> calculator</a>
-        
-    </td>
-            <td></td>
-
-        </tbody>
-        </table>
-        <br/>
-        
-    </section>
-    <br/> 
-    <hr>
-     <section id="contact" class="hidden">
-        <div class="contact">
-            <h1>contact</h1>
-        <a href="mailto:alexnox1546@gmail.com">
-        <img src="img/email.png" style="width: 20px; height: 20px;" alt="email" /></a>
-        <a href="https://www.linkedin.com/in/dayen-adney-012057404/" target="_blank">
-             <img src="img/logo_linkedin.png"style="width: 20px; height: 20px;" alt="LinkedIn"/></a>
-             <a href="https://github.com/cloudcode02" target="_blank">
-                 <img src="img/github.png"style="width: 20px; height: 20px;" alt="GitHub"/></a>
-               <a href="https://www.instagram.com/mycloud196?igsh=cTN3bGR5aG90bHNh" target="_blank"> 
-                <img src="img/insta.png"style="width: 20px; height: 20px;" alt="Instagram"/></a>
+    <div class="gear-container">
+        <img src="img/gear.png" alt="gear" class="gear gear2" />
+        <img src="img/gear.png" alt="gear" class="gear gear3" />
+        <img src="img/gear.png" alt="gear" class="gear6 gear4" />
+        <img src="img/gear.png" alt="gear" class="gear6 gear5" />
     </div>
-            </section>
-  <footer> 
-    <p class="end">@copyricht </p>
-  </footer>
+
+    <main>
+        <section id="aboutme" class="hidden">
+            <div class="circle">
+                <h1>about me</h1>
+            </div>
+            <p class="intro">
+                I am a first-year Software Engineering student at UNASAT with nearly two years of coding experience.<br>
+                I strive to constantly improve my skills to become a full-stack software developer.<br>
+                By being open to feedback and proactive in learning, I have managed to efficiently solve the challenges I encounter as a developer.<br>
+                I don't limit myself to software alone; I build the bridge between hardware and software. This focus allows me to lead and collaborate on developing creative, functional prototypes that solve real-world problems.
+            </p>
+        </section>
+
+        <section id="skills" class="hidden">
+            <h1>skills</h1>
+            <ul class="skills-list">
+                <li>HTML : 90%</li>
+                <li>CSS: 80%</li>
+                <li>JavaScript: 40%</li>
+                <li>React: 10%</li>
+                <li>MySQL: 20%</li>
+                <li>PHP: 20%</li>
+                <li>C++: 50%</li>
+            </ul>
+            
+            <img class="img1" src="img/screen.jpeg" alt="Coding workspace monitor screen" />
+        </section>
+    </main>
+
+    <footer> 
+        <p class="end">&copy; Copyright 2026</p>
+    </footer>
+
+    <script src="js/button.js"></script>
 </body>
 </html>
