@@ -7,12 +7,18 @@
     <link rel="icon" title="image" href="img/WhatsApp Image 2026-04-15 at 8.04.25 PM.jpeg">
     <!--ive use whatsapp image cus idk why my other png didnt wanna work -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/medium devices.css">
+    <link rel="stylesheet" href="css/small_devices.css">
+    <link rel="stylesheet" href="css/medium_devices.css">
 
 </head>
 <body>
+    
     <img src="img/gear.png" alt="gear" class="logo1"/>
-    <img src="img/pic.png" class="logo"/>
+ <img src="img/pic.png" class="logo"/>
+
+
+
+    
 
     <div class="gear-container">
         <img src="img/gear.png" alt="gear" class="gear gear2"/>
@@ -30,7 +36,7 @@
             <div id="info" hidden>
                 <nav class="navbar">
                     <ul class="info-link">
-                        <li><a href="#home" class="navlinks"> home</a></li>
+                        <li><a href="#aboutme" class="navlinks"> about me</a></li>
                         <li><a href="#skills" class="navlinks"> skills</a></li>
                         <li><a href="#project" class="navlinks"> project</a></li>
                         <li><a href="#contact" class="navlinks"> contact</a></li>
@@ -41,12 +47,12 @@
        
     </header><br/>
     
-    <section id="home" class="hidden">
+    <section id="aboutme" class="hidden">
 <div class="circle">
-    <h1> home</h1>
+    <h1> about me</h1>
     </div><br/>
 
-     <p>Hello <br/>
+     <p class="intro">Hello <br/>
 I am a first-year Software Engineering student at UNASAT with nearly two years of coding experience.<br/>
  I strive to constantly improve my skills to become a full-stack software developer.<br/>
   By being open to feedback and proactive in learning, I have managed to efficiently solve the challenges I encounter as a developer.<br/>
@@ -57,7 +63,8 @@ this focus allows me to lead and collaborate on developing creative, functional 
 
 
 
-    </section>
+    </section><br/>
+    <hr>
      <section id="skills" class="hidden">
         <h1> skills</h1>
         <p class="skills">
@@ -70,15 +77,39 @@ this focus allows me to lead and collaborate on developing creative, functional 
 - php: 20% <br/>
 - c++: 50% <br/>
         </p><br/>
-        <nav class="img-container">
+        
         <img class="img1" src="img/coding screen.jpeg"/>
-</nav>
          
     </section>
+    <br/>
+    <hr>
      <section id="project" class="hidden">
         <h1>projects</h1>
+        <table style="border: 4px;">
+            <thead>
+                <tr>
+            <th>finished</th>
+            <th>still in progress</th>
+            
+                </tr>
+            </thead>
+        <tbody>
+            <tr>
+            <td>
+            
+        <video src="video/Schermopname 2026-05-18 030659.mp4" controls></video>
+       <a href="https://github.com/cloudcode02/calculator" class="links"> calculator</a>
+        
+    </td>
+            <td></td>
+
+        </tbody>
+        </table>
+        <br/>
         
     </section>
+    <br/> 
+    <hr>
      <section id="contact" class="hidden">
         <div class="contact">
             <h1>contact</h1>
@@ -92,6 +123,8 @@ this focus allows me to lead and collaborate on developing creative, functional 
                 <img src="img/insta.png"style="width: 20px; height: 20px;" alt="Instagram"/></a>
     </div>
             </section>
-  
+  <footer> 
+    <p class="end">@copyricht </p>
+  </footer>
 </body>
 </html>
